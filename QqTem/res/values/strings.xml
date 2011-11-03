@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QqTem</string>
+    <string name="tabname_map">Mapa</string>
+    <string name="tabname_list">Lista de Locais</string>
+    <string name="tabname_search">Busca</string>
+    <string name="menu_add">Adicionar Local</string>
+    <string name="menu_login">Login/Logout</string>
+
+</resources>
