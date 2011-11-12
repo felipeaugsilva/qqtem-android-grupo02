@@ -7,6 +7,11 @@
     <string name="tabname_search">Busca</string>
     <string name="menu_add">Adicionar Local</string>
     <string name="menu_login">Login/Logout</string>
-    <string name="search_hint">Search address</string>
-
+    <string name="search_hint">Buscar endereço</string>
+    <string name="filters_prompt">Filtrar por</string>
+    <string-array name="filters_array">
+        <item>Tudo</item>
+        <item>Bar</item>
+        <item>Restaurante</item>
+    </string-array>
 </resources>
