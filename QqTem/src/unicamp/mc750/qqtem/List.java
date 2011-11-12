@@ -3,17 +3,25 @@ package unicamp.mc750.qqtem;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 public class List extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        TextView textview = new TextView(this);
-        textview.setText("Lista...");
-        setContentView(textview);
+        setContentView(R.layout.list);
+        
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        		this, R.array.filters_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        
+        Button locationButton = (Button) findViewById(R.id.find_location);
     }
 	
 	@Override

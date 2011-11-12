@@ -2,6 +2,9 @@ package unicamp.mc750.qqtem;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
@@ -14,9 +17,18 @@ public class Map extends MapActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map);
         
-        MapView mapView = (MapView) findViewById(R.id.mapview);
+        final MapView mapView = (MapView) findViewById(R.id.mapview);
         
         mapView.setBuiltInZoomControls(true);
+        
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        		this, R.array.filters_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        Button locationButton = (Button) findViewById(R.id.find_location);
     }
     
     @Override
