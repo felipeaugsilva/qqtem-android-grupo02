@@ -3,5 +3,7 @@
 
     <integer name="MENU_ADD_ID">1</integer>
     <integer name="MENU_LOGIN_ID">2</integer>
+    <integer name="DIALOG_LOGIN_ID">1</integer>
+    <integer name="DIALOG_ADD_ID">2</integer>
     
 </resources>
