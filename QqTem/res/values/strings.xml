@@ -11,7 +11,7 @@
     <string name="filters_prompt">Filtrar por</string>
     <string-array name="filters_array">
         <item>Tudo</item>
-        <item>Bar</item>
-        <item>Restaurante</item>
+        <item>Bares</item>
+        <item>Restaurantes</item>
     </string-array>
 </resources>
