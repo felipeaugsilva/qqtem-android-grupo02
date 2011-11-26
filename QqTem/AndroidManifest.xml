@@ -37,6 +37,7 @@
                        android:resource="@xml/searchable" />
         </activity>
         <activity android:name="Search"></activity>
+        <activity android:name="Signup"></activity>
     </application>
 
 </manifest>

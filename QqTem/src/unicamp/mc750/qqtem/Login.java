@@ -2,23 +2,42 @@ package unicamp.mc750.qqtem;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.os.Bundle;
-import android.widget.TextView;
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class Login extends Activity {
+public class Login extends Dialog implements OnClickListener {
 
-	private static boolean mLogged = false;
+	Button signupButton, okButton, cancellButton;
+	private static final int ACTIVITY_CREATE=0;
+	
+    public Login(Context context) {
+		super(context);
+
+	    setContentView(R.layout.login);
+	    setTitle("Login");
+	    setOwnerActivity((Activity) context);
+	    
+	    signupButton = (Button) findViewById(R.id.signup_button);
+	    signupButton.setOnClickListener(this);
+	    
+	    okButton = (Button) findViewById(R.id.submit_login_button);
+	    okButton.setOnClickListener(this);
+	    
+	    cancellButton = (Button) findViewById(R.id.cancell_login_button);
+	    cancellButton.setOnClickListener(this);
+
+	}
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-	
-	public static boolean isLogged() {
-		return mLogged;
-	}
-	
-	public static void logout() {
-		mLogged = false;
-	}
+    public void onClick(View v) {  
+	    if (v == signupButton) {
+	    	Intent i = new Intent(getOwnerActivity().getApplicationContext(), Signup.class);
+	    	getOwnerActivity().startActivityForResult(i, ACTIVITY_CREATE);
+	    } else {
+	    	dismiss();
+	    }
+	 }
 }
