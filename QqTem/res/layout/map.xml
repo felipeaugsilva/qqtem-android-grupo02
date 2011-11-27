@@ -27,10 +27,12 @@
 	        
     </LinearLayout>
 
+    <!--  API Key do Felipe: 0rySjY265gjY0X-keBymn0cZCjR1XirFq0ykqsQ -->    
+    <!--  API Key do Thiago: 0WsDQ50w54kp5OHajPTOkN6Z8sTgkJ95-Oqs6og -->
 	<com.google.android.maps.MapView
 	    android:id="@+id/mapview"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    android:clickable="true"
-	    android:apiKey="0rySjY265gjY0X-keBymn0cZCjR1XirFq0ykqsQ" />
+	    android:apiKey="0WsDQ50w54kp5OHajPTOkN6Z8sTgkJ95-Oqs6og" />
 </LinearLayout>
