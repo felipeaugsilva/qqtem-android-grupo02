@@ -11,18 +11,14 @@
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
+            android:layout_width="240dp"
+            android:layout_height="49dp"
             android:prompt="@string/filters_prompt" />
-        
-        <Button
-            android:id="@+id/find_location"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="4"
-            android:layout_alignParentRight="true"
-            android:text="x" />
+            
+        <ImageView
+           android:layout_width="55dp"
+           android:layout_height="44dp"
+           android:src="@drawable/lock_on"/>
             
     </LinearLayout>
     

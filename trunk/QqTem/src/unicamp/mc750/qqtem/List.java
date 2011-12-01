@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
 public class List extends Activity {
@@ -21,8 +20,6 @@ public class List extends Activity {
         		this, R.array.filters_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        
-        Button locationButton = (Button) findViewById(R.id.find_location);
     }
 	
 	@Override

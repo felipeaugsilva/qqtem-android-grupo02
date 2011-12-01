@@ -12,6 +12,8 @@
     <string-array name="filters_array">
         <item>Tudo</item>
         <item>Bares</item>
+        <item>Hotéis</item>
+        <item>Museus</item>
         <item>Restaurantes</item>
     </string-array>
 </resources>
