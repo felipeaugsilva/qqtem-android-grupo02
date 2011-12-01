@@ -1,14 +1,19 @@
 package unicamp.mc750.qqtem;
 
+import java.util.List;
+
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 
+import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapView;
+import com.google.android.maps.Overlay;
+import com.google.android.maps.OverlayItem;
 
 public class Map extends MapActivity {
 	
@@ -28,8 +33,16 @@ public class Map extends MapActivity {
         		this, R.array.filters_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
-        Button locationButton = (Button) findViewById(R.id.find_location);
+        
+        List<Overlay> mapOverlays = mapView.getOverlays();
+        Drawable drawable = this.getResources().getDrawable(R.drawable.mapmarker);
+        MapItemizedOverlay itemizedoverlay = new MapItemizedOverlay(drawable, this);
+        
+        GeoPoint point = new GeoPoint(19240000,-99120000);
+        OverlayItem overlayitem = new OverlayItem(point, "Hola, Mundo!", "I'm in Mexico City!");
+        
+        itemizedoverlay.addOverlay(overlayitem);
+        mapOverlays.add(itemizedoverlay);
     }
     
     @Override
